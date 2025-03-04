@@ -1,0 +1,57 @@
+apiVersion: v1
+entries:
+  common:
+  - apiVersion: v2
+    created: "2025-03-04T11:30:26.822385936Z"
+    description: A Helm chart for Kubernetes
+    digest: bb562eaa4b7cca45558042e1c19b87d56bdd4818da9b8e891e2d511c6a156e5d
+    name: common
+    type: library
+    urls:
+    - https://footprint-it-solutions.github.io/onechart/common-0.7.0.tgz
+    version: 0.7.0
+  cron-job:
+  - apiVersion: v2
+    created: "2025-03-04T11:30:26.824092103Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.7.0
+    description: One chart to rule them all. A generic Helm chart for your application
+      deployments. Because no-one can remember the Kubernetes yaml syntax.
+    digest: b49fa1f042e17d7e9425db7354358f27235e38c2921270a4e7e50fa46be60123
+    name: cron-job
+    type: application
+    urls:
+    - https://footprint-it-solutions.github.io/onechart/cron-job-1.1.0.tgz
+    version: 1.1.0
+  onechart:
+  - apiVersion: v2
+    created: "2025-03-04T11:30:26.825132615Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.7.0
+    description: One chart to rule them all. A generic Helm chart for your application
+      deployments. Because no-one can remember the Kubernetes yaml syntax.
+    digest: f938293dc43a6e11bd24dc9802e545b476970c57f476d7b3c93a1f2636f44f1d
+    name: onechart
+    type: application
+    urls:
+    - https://footprint-it-solutions.github.io/onechart/onechart-1.1.0.tgz
+    version: 1.1.0
+  static-site:
+  - apiVersion: v2
+    created: "2025-03-04T11:30:26.825758761Z"
+    dependencies:
+    - name: common
+      repository: file://../common
+      version: 0.7.0
+    description: Chart to build and deploy static sites
+    digest: fd131a4ee588dff63a8e33002098955425ac8eb12377b9f9e92c15e6e9b80488
+    name: static-site
+    type: application
+    urls:
+    - https://footprint-it-solutions.github.io/onechart/static-site-0.74.0.tgz
+    version: 0.74.0
+generated: "2025-03-04T11:30:26.82194013Z"
