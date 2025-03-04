@@ -90,6 +90,13 @@ jobs:
       env:
         CHART_VERSION: ${{ steps.chart_version.outputs.chart_version }}
         STATIC_SITE_CHART_VERSION: ${{ steps.chart_version.outputs.static_site_chart_version }}
+
+    - name: Publish Helm chart to GitHub Pages
+      uses: stefanprodan/helm-gh-pages@0ad2bb377311d61ac04ad9eb6f252fb68e207260 # v1.7.0
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        linting: off
+
     - name: Preparing the next release version
       run: |
         git config --global user.email "action@github.com"
